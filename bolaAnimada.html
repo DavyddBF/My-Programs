@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bola Animada</title>
+    </head>
+
+    <body>
+        <canvas width="600" height="400"></canvas>
+        <br>
+        
+        <main>
+            Escolha a cor do circulo <input type="color">
+    
+            <script>
+        
+                var tela = document.querySelector('canvas');
+                var pincel = tela.getContext('2d');
+        
+                pincel.fillStyle = 'lightgray';
+                pincel.fillRect(0, 0, 600, 400);
+                pincel.fill();
+        
+                var corEscolhida = document.querySelector('input');
+                
+                var raioDoCirculo = 10; 
+                var x = 20;
+        
+                function desenhaCirculo(x, y, raio) {
+        
+                    pincel.fillStyle = 'blue';
+                    pincel.beginPath();
+                    pincel.arc(x, y, raio, 0, 2 * Math.PI);
+                    pincel.fill();
+        
+                    console.log(x + ', ' + y);
+                }
+        
+                function limpaTela() {
+        
+                    pincel.clearRect(0, 0, 600, 400);
+                }
+        
+                function animaCirculo() {
+        
+                    limpaTela();
+                    desenhaCirculo(x, 20, raioDoCirculo);
+                    x++;
+                }
+        
+                setInterval(animaCirculo, 10);
+        
+            </script>
+
+            <p>Bem vindo!!</p>
+        </main>
+
+    </body>
+    
+</html>
