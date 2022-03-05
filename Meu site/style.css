@@ -1,0 +1,19 @@
+.titulo-principal{
+    background-color: lightgray;
+    font-size: 30px;
+    font-weight:bold;
+    padding: 50px 20px 50px;
+    margin: 0 0 15px;
+}
+
+.titulo-historia-do-site{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.historia-do-site{
+    text-align: center;
+    font-size: 18px;
+}
